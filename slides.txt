@@ -1,0 +1,94 @@
+-----------------------------------------------------------------------------------------------------------
+slides.txt - v1.2 and above - 3/6/06
+
+Flash MX mini slide show configuration file. The file must always be called slides.txt and must always be in the
+same directory as index.swf - if you see "Configuration error" when you start the slide show, it's probably because this file is missing! Also, if you don't get what you expect, there may be some "&" missing from the start or end
+of configuration lines.
+
+Throughout this file, you'll see lines starting and ending with "&" - these are the configuration lines. The reason
+they start and end with "&" is this is how Flash loads variables from an external text file. As all these other
+lines don't start and end with "&", Flash just ignores them. Therefore we can use them to comment the file.
+-----------------------------------------------------------------------------------------------------------
+
+################# START OF CONFIGURATION LINES #################
+
+Mode:
+  easy = just call the slides 1.jpg, 2.jpg, 3.jpg ... etc.
+  advanced = you must tell the show the filename of each slide within the slides directory
+
+&mode=easy&
+-----------------------------------------------------------------------------------------------------------
+
+Morphing:
+  yes = The background colour will never be visible. The images will fade into each other
+  no = The background colour will become visible as the image fades out before the next one fades in
+
+&morph=yes&
+-----------------------------------------------------------------------------------------------------------
+
+Background colour:
+  This is the HEX code for the background colour of the slide show. You won't see this colour if
+  morphing is enabled.
+
+&background_colour=ffffff&
+-----------------------------------------------------------------------------------------------------------
+
+Slides directory:
+  This is where the slide files are stored on the server. The directory path is relative to where
+  the slide show .swf file is located on the server. e.g. if index.swf is at URL www.yoursite.com/slides
+  and the slides are a directory called slide_files, then all you need is slide_files, without a path,
+  i.e. slides_directory=slide_files
+  If you want to keep the slides in the same directory as index.swf, just put SAME in here, i.e.
+  slides_directory=SAME
+  You can use relative paths here too, e.g. slides_directory=../../images or slides_directory=/images
+
+&slides_directory=slides&
+-----------------------------------------------------------------------------------------------------------
+
+Number of slides in the show:
+  Tell the show how many slide files you have
+
+&num_slides=5&
+-----------------------------------------------------------------------------------------------------------
+
+Fade rate for the slides:
+  This will tell the show how fast or slow to fade the slides in and out. The higher the number
+  the faster the fade, i.e. a fade_rate of 10 will make the slide appear/disappear much faster
+  than a fade_rate of 1
+
+&fade_rate=4&
+-----------------------------------------------------------------------------------------------------------
+
+Length of time you want each slide displayed:
+  This will tell the show how many seconds each slide should be displayed
+
+&seconds=4&
+-----------------------------------------------------------------------------------------------------------
+
+Random slide show:
+  Set this to yes if you want the slides to appear randomly.
+  
+&random_slides=no&
+-----------------------------------------------------------------------------------------------------------
+
+Random start with normal slide flow:
+  Set this to yes if you want a random start to your slide show but not random images.
+  e.g. if you have slides 1,2,3,4 and set this to yes, then the flow will be:
+  3,4,1,2,3,4 ... or whatever slide is randomly chosen to start the show.
+  
+&random_start=yes&
+-----------------------------------------------------------------------------------------------------------
+
+Slide filenames:
+  You only need these lines if you've chosen the advanced option. Just ignore these if you're
+  in easy mode. If you are in advanced mode, you must specify the names of the files, within
+  the slides_directory. This lets you change the slide show by just changing slides_directory
+  and these filenames
+
+&slide1=first.jpg&
+&slide2=second.jpg&
+&slide3=third.jpg&
+&slide4=fourth.jpg&
+&slide5=fifth.jpg&
+
+################# END OF CONFIGURATION LINES #################
