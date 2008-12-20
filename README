@@ -1,6 +1,7 @@
 Welcome to the Flash Mini Slideshow!
 
 o Introduction
+o Demo
 o Installing/configuring
 o More information
 
@@ -8,6 +9,10 @@ Introduction
 ============
 The Flash Mini Slideshow lets you embedd a small flash movie in you website that displays any number of
 images in a slideshow.
+
+Demo
+====
+To see the slideshow in action, open index.html in your browser.
 
 Installing/configuring
 ======================
